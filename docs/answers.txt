@@ -1,0 +1,76 @@
+Final Information
+- Date when I went through the Git Lab Tutorials: February 21, 2025  
+- Date when I set up my GitHub account: February 21, 2025  
+
+Git Repository Analysis
+
+1. Paste the console output from step 3C (2 points)
+    (base) rishitavanidonapati@Rishitavanis-MacBook-Air assignment3-GIT-OOP % git add docs/status.txt
+    git commit -m "Added git status output to docs/status.txt"
+    git push origin master
+    On branch master
+    Your branch is ahead of 'origin/master' by 2 commits.
+        (use "git push" to publish your local commits)
+    nothing to commit, working tree clean
+    failed to get: -128
+    Username for 'https://github.com': rd23y
+    Password for 'https://rd23y@github.com': 
+    Enumerating objects: 9, done.
+    Counting objects: 100% (9/9), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (8/8), 980 bytes | 980.00 KiB/s, done.
+    Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+    remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+    To https://github.com/rd23y/assignment3-GIT-OOP.git
+        644bf50..12de5d2  master -> master
+    (base) rishitavanidonapati@Rishitavanis-MacBook-Air assignment3-GIT-OOP % 
+
+
+2. How many commits have been done to the repository? (4 points)
+   - Command used:** `git rev-list --count HEAD`
+   - Output: 10
+
+3. When was `README.md` last modified? (4 points)
+   - Command used:** `git log -1 --format=%cd -- README.md`
+   - Output: Fri Feb 21 14:59:58 2025 -0500
+
+4. Two reasons why branches are used in Git? (4 points)
+   - Reason 1: To develop new features without affecting the main codebase.
+   - Reason 2: To allow multiple developers to work on different tasks simultaneously.
+
+5. Difference between `git log` and `git status`? (4 points)
+   - `git log`: Shows the history of commits.
+   - `git status`: Shows the current state of your working directory.
+
+6. Command to see commits where `Vehicle.h` was modified? (4 points)
+   - Command: `git log -- Vehicle.h`
+
+7. Command to see commits whose message contains "file"? (4 points)
+   - Command: `git log --grep="file"`
+
+Object-Oriented Programming (OOP) Concepts
+
+8. In the context of object-oriented programming (I) What is inheritance? (II) What is polymorphism? (III) What is encapsulation? (6 points)
+   - Inheritance: When a class derives properties and behaviors from another class.
+   - Polymorphism: When a function or method behaves differently based on input types.
+   - Encapsulation: Restricting direct access to object data and only allowing modification through methods.
+
+Git Workflow & Teamwork Questions
+
+9. What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration Manager” workflow? (5 points)
+   - Integration Manager Workflow: Each developer has their own public repository and pulls from a central repository (sometimes called the "blessed" repository).  
+   - The Integration Manager is responsible for reviewing and merging contributions from multiple developers before integrating changes into the central repository.  
+   - Dictator and Lieutenants Workflow: Developers push their changes to a lieutenant's repository instead of directly to the central repository. The Lieutenants review and merge changes before submitting them to the Dictator (the main project owner).  
+   - The Dictator is the only one who can push to the central repository, after reviewing changes merged by lieutenants.  
+   Key Difference:
+   - In the Integration Manager Workflow, a single manager integrates all changes into the central repository.  
+   - In the Dictator and Lieutenants Workflow, integration is distributed among lieutenants, who merge changes before sending them to the dictator for final integration.
+
+
+10. How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+   - Better Organization: Instead of all 100 developers committing directly to the main repository, lieutenants handle integration for smaller groups, reducing merge conflicts.
+   - Scalability: This approach reduces bottlenecks, as lieutenants help manage and review code, making it more efficient than a single centralized workflow.
+   - Conflict Resolution: Lieutenants can catch and fix integration issues before they reach the dictator, reducing errors in the main repository.
+   - Parallel Development: Different groups can work on separate features and merge into lieutenant repositories first, ensuring smoother integration.
+   - Code Quality Control: Since lieutenants review code before merging, the final integration by the dictator ensures high-quality contributions.
