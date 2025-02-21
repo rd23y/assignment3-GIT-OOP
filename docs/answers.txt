@@ -26,7 +26,6 @@ Git Repository Analysis
         644bf50..12de5d2  master -> master
     (base) rishitavanidonapati@Rishitavanis-MacBook-Air assignment3-GIT-OOP % 
 
-
 2. How many commits have been done to the repository? (4 points)
    - Command used:** `git rev-list --count HEAD`
    - Output: 10
